@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>مثال على حدث onfocus</title>
+  
+</head>
+<body>
+<input id="input" type="text" placeholder="ابدأ الكتابة هنا..." />
+    <div id="notice"></div>
+
+    <script>
+        // تعريف العناصر في متغيرات
+        var myinput = document.getElementById('input'),
+            mynote  = document.getElementById('notice');
+            
+        // يعمل فور رفع الإصبع عن المفتاح أثناء الكتابة  onkeyup حدث 
+        myinput.onkeyup = function() {
+            // إظهار الرسالة بمجرد البدء بالكتابة
+            mynote.textContent = 'please Dont forget to write A strong password';
+        };
+    </script>
+</body>
+</html>
